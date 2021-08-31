@@ -14,8 +14,38 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function hasRepetitiveNumber(counter) {
+  for (let count of counter) {
+    if (count >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isValid(number) {
+  let counter = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (let num of number) {
+    if (num < 0 || num > 9) {
+      return false;
+    }
+    counter[num] += 1;
+  }
+  if (hasRepetitiveNumber(counter)) {
+    return false;
+  }
+  return true;
+}
+
+function generatePhoneNumber(n) {
+  if (n.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let valid = isValid(n);
+  if (!valid) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 // Desafio 12
