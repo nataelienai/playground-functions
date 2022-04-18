@@ -1,7 +1,5 @@
 # Playground Functions
 
-## Descrição
-
 Playground Functions é um projeto formado por desafios a serem resolvidos usando a linguagem JavaScript. A proposta dos desafios é treinar os conhecimentos básicos da linguagem, como declaração de funções, estruturas condicionais e de repetição, manipulação de arrays, entre outros.
 
 ## Tecnologias utilizadas
